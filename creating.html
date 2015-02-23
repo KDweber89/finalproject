@@ -1,0 +1,236 @@
+
+--<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<title>Cafe Ambienc&eacute</title>
+    <meta name="keywords" 
+    content="Cafes, Kramarczuks, Cossettas, Sounds, Maps, 
+    Ambience, Ambiant noise, background noise, restaurants, 
+    white noise, food, drinks, reviews, cafe noise, relaxing sounds, 
+    coffee, perk place, coffee, coffeehouse, beer, bakery, 
+    Bent Paddle, Brewing,muddy pig, corner" /> 
+  <meta name="description" content="A listing of all the cafe's, bars, and bakeries we have visited thus far. Including short descriptions and 
+    links to them." />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"> </script>
+<script type="text/javascript" src="js/Bootstrap.js"> </script>
+
+
+<!---- map stuff ---->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+      function initialize() {
+   var BentPaddleBrewing = new google.maps.LatLng(46.767728,-92.122006);
+   var CornerBakeryCafe = new google.maps.LatLng(41.8879918,-87.6252275);
+   var Cossettas = new google.maps.LatLng(44.943812,-93.10396);
+   var Kramaraczuks = new google.maps.LatLng(44.9878726,-93.2574676);
+   var MuddyPig = new google.maps.LatLng(44.946271,-93.1261);
+   var PerkPlace = new google.maps.LatLng(46.82127,-92.098621);
+   var WildGoose = new google.maps.LatLng(46.583606,-95.576545);
+   var 3M = new google.maps.LatLng(46.878848,-96.787848);
+   var FinnishBistro = new google.maps.LatLng(44.981517,-93.194917);
+   var ColossalMin = new google.maps.LatLng(44.982673,-93.1956807);
+   var CoffeeEmporium = new google.maps.LatLng(39.1077626,-84.5125284); 
+   var MoxxCoffee = new google.maps.LatLng(38.3460124,-81.6275726);
+   var BalzacCoffee = new google.maps.LatLng(53.55254,9.99666);
+   var ChilliBrew = new google.maps.LatLng(39.728807,-86.097466);
+   var bounds = new google.maps.LatLngBounds();
+        var map_canvas = document.getElementById('Maps_Image');
+        var map_options = {
+          center: new google.maps.LatLng(43.3000154,-91.7679679),
+          zoom: 5,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options);
+
+  var markers = [ 
+    [3M, 'styles/images/star.png',
+      'Atomic Coffee and Wine Bar', 'AtomicCoffee.html'],
+    [BentPaddleBrewing,'images/Maps/brewery1.png',
+      'Bent Paddle Brewing Co.', 'BentPaddleBrewing.html'],
+    [CornerBakeryCafe,'images/Maps/bread.png',
+      'Corner Bakery Cafe no. 19', 'cornerbakery.html'],
+    [Cossettas, 'images/Maps/restaurant_italian.png',
+      'Cossettas St.Paul', 'cossettas_home.html'],
+    [Kramaraczuks,'images/Maps/butcher-2.png',
+      'Kramaraczuks Sausage Company', 'Kramaraczuks_home.html'],
+    [MuddyPig,'images/Maps/bar.png',
+      'Muddy Pig - Minneapolis', 'muddypig.html'],
+    [PerkPlace, 'images/Maps/coffee.png',
+      'Perk Place Coffeehouse and Bakery', 'PerkPlaceCafe.html'],
+    [WildGoose, 'images/Maps/gifts.png',
+       'Wild Goose Gifts and Coffee', 'TheWildGoose.html'],
+    [new google.maps.LatLng(44.9735655, -93.2294970), 'images/Maps/2coffee.png',
+      'Espresso Expose', 'EspressoExpose.html'],
+    [FinnishBistro, 'images/Maps/2coffee.png',
+      'Finnish Bistro', 'FinnishBistro.html'],
+    [ColossalMin, 'images/Maps/coffee.png', 
+      'Colossal Cafe Minneapolis', 'colossalcafe.html'],
+    [CoffeeEmporium, 'images/Maps/2coffee.png', 
+      'Coffee Emporium', 'coffeeEmporium.html'],
+    [MoxxCoffee, 'images/Maps/coffee.png', 
+      'Moxx Coffee', 'moxxcoffee.html'],
+    [BalzacCoffee, 'images/Maps/2coffee.png', 
+      'Balzac Coffee', 'BalzacCoffee.html'],
+    [ChilliBrew, 'images/Maps/brewery1.png', 
+      'Chilli Water Brewing', 'ChilliWaterBrewing.html']
+
+    
+   ];
+
+  var infoWindow = new google.maps.InfoWindow(), marker, i;
+
+  //setup markers and infowindows
+  for(i=0; i<markers.length; i++){
+    //alert(markers[i][0]);
+    bounds.extend(markers[i][0]);
+    marker = new google.maps.Marker({
+      position: markers[i][0],
+      icon: markers[i][1],
+      title: markers[i][2],
+      map: map,
+      clickable: true,
+      flat: true,
+      body: markers[i][3]
+    });
+
+  //infowindows:
+    google.maps.event.addListener(marker, 'mousedown', (function(marker,i) {
+      return function(){//alert(marker.title);
+        infoWindow.setContent('<div><h3><a href="http://cafeambience.com/' + marker.body + '" target="_self">' 
+          + marker.title + '</a></h3><div><p>Visit and Listen to the Ambiences from ' + marker.title + '.</div></div>');
+        infoWindow.open(map, marker);
+      }
+    })(marker, i));
+    map.fitBounds(bounds);
+  }//end for
+   }//end initialize
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+
+
+
+<link rel="stylesheet" type="text/css" href="css/fig.css">
+
+<link rel="stylesheet" type="text/css" href="css/menus.css">
+<link rel="stylesheet" type="text/css" href="css/fonts.css">
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52801743-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style type="text/css">
+  
+body{
+  background-image: url("../images/about_background_pic.jpg");
+  background-repeat: repeat;
+  width: 100%;
+  max-height: 100%;
+  background-attachment:fixed;
+  }
+#top {
+    position: absolute;
+    float: center;
+        margin-bottom: 10px;
+    margin-top: 80px;
+  margin-left: 50px;
+    border-radius: 10px;
+    width: auto;
+  font-size: 80px;
+    background-color: #808080;
+    font-family:'MyFonts';
+  font-weight: bold;
+  font-variant: normal;
+  opacity:.85;
+  text-align:center;
+  vertical-align:text-center;
+  color:white;
+  top:5 %;
+  left:2%;
+  }
+#contactInfo{
+  width:100%;
+  height:auto;
+  color: white;
+  background-color:#808080;
+  opacity:0.8;
+  font-family:'MyFonts';
+  font-size:22px;
+  text-align: center;
+  position: absolute;
+} 
+
+
+</style>
+
+</head>
+
+<body> 
+
+<div id="linkss" style="position:fixed; top:60%;z-index:20;">
+  <script type="text/javascript">
+    function links_pos(){   
+      var change = document.getElementById('linkss');
+      change.style.left = window.innerWidth-360  + 'px';
+      change.style.top  = '10px';
+    }
+    links_pos();
+  </script>
+
+  <div id="links">
+    <ul>
+      <li><a href="index.php" target="_self">Home</a></li>
+      <li><a onclick="pageSwitch()" href="About.html" target="_self">About Us</a></li>
+      <li><a onclick="pageSwitch()" href=<script async src="https://static.medium.com/embed.js"></script><a class="m-profile" href="https://medium.com/@cafe_ambience">Blog</a></a></li>
+      <li><a onclick="pageSwitch()" href="cafes.html" target="_self" title="Cafe's we've visited">Cafes</a></li>  
+    </ul>
+    <div style="clear:both">
+    </div> 
+  </div>
+</div>
+
+
+<div id="top" class="top"> Cafes, Coffeeshops, and Breweries</div>
+
+<div id="Maps_Image" style="background-color:grey;width:90%; height:85%;opacity:1.00;position:absolute;left:5%;top:35%">
+
+</div>
+
+
+<div id="contactInfo" style="position: absolute;">
+  Contact us at: cafeambiences@gmail.com<br> 
+  Check us out on <a href= "https://www.facebook.com/pages/Cafe-Ambience/526206410839656?ref_type=bookmark" target="_blank"> Facebook </a>
+</div>
+
+<script type="text/javascript">
+  $('#contactInfo').css("top", window.innerHeight + window.innerHeight*.2 + 'px');
+  $(window).resize(function(){
+      var cur_size = $('#top').css("font-size");
+      cur_size = parseInt(cur_size.replace(/px/,""));
+      var win_h = window.innerHeight;
+      var scr_h = screen.height;
+      var new_size = 80/scr_h*win_h;
+      $("#top").css("font-size", new_size + "px");
+      $("#top").css("height", new_size*1.1+ "px");
+  });
+</script>
+
+<script type="text/javascript" src="js/fig.js"></script>
+
+</body>
+</html>
