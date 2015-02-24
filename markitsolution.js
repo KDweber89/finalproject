@@ -43,7 +43,7 @@ Markit.QuoteService.prototype.makeRequest = function() {
     });
 };
 
-new Markit.QuoteService("AAPL", function(jsonResult) {
+new Markit.QuoteService("#myBtn", function(jsonResult) {
 
     //Catch errors
     if (!jsonResult || jsonResult.Message){

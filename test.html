@@ -14,6 +14,8 @@
 	</div>
 </div>
 
+<button id = "myBtn"> Refresh </button>
+<p id ="demo"></p>
 
 </body>
 
@@ -63,7 +65,7 @@
 	 var bounds = new google.maps.LatLngBounds();
         var map_canvas = document.getElementById('Maps_Image');
         var map_options = {
-          center: new google.maps.LatLng(39.8282,-98.5795),
+          center: new google.maps.LatLng(39.0997,-94.5783),  
           zoom: 5,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
@@ -96,9 +98,9 @@
 		[travelers, 'styles/images/star.png', 'Travelers'],
 		[unitedHealthGroup, 'styles/images/star.png', 'United Health Group'],
 		[unitedTechnologies, 'styles/images/star.png', 'United Tecnologies'],
-		[verizon, 'styles/images/star.png', 'Verizon', 'ChilliWaterBrewing.html'],
-		[visa, 'styles/images/star.png', 'Visa', 'ChilliWaterBrewing.html'],
-		[walmart, 'styles/images/star.png', 'Wal Mart', 'ChilliWaterBrewing.html'],
+		[verizon, 'styles/images/star.png', 'Verizon'],
+		[visa, 'styles/images/star.png', 'Visa'],
+		[walmart, 'styles/images/star.png', 'Wal Mart'],
 		[waltDisney, 'styles/images/star.png', 'Walt Disney'],
  ];
 
@@ -119,6 +121,18 @@
 			body: markers[i][3]
 		});
 
+
+
+
+
+
+		var apitest = function (){
+			console.log("http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol=DAL&callback=myFunction")
+		} 
+ 
+
+
+
 	//infowindows:
 		/*google.maps.event.addListener(marker, 'mousedown', (function(marker,i) {
 			return function(){
@@ -133,7 +147,13 @@
 
     </script>
 
+	<script>
+	document.getElementById("myBtn").addEventListener("click", displayDate);
 
+	function displayDate() {
+	    document.getElementById("demo").innerHTML = getJSON("http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol=DAL&callback=myFunction");
+	}
+	</script>
 
 
 </html>
