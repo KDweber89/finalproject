@@ -1,7 +1,18 @@
 var input = $("#keyword")
 var form = $("#search")
-var apiUrl = "http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=" + " " + "&callback=myFunction";
+var apiUrl = "http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=" + symbol + "&callback=myFunction";
 //var apiUrl = "http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=" + "" 
+
+
+//http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=AAPL&callback=myFunction
+
+/*$.getJSON("http://dev.markitondemand.com/Api/v2/jsonp?symbol=" + symbol + "&callback=myFunction";
+  });
+*/
+
+
+
+
 
 
 //when a user submits a form
@@ -25,4 +36,6 @@ form.on("submit", function(e){
 		}
 	});
 });
+
+
 
