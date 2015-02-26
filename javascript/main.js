@@ -1,102 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title> Where are they located? </title>
-</head>
-<link rel="stylesheet" type = "text/css" href= "styles/teststyles.css">
-
-</head>
-<body> 
-
-<div class = "banner">
-	<div class = "banner2">
-		<h1> Where are they headquartered?</h1>
-	</div>
-</div>
 
 
-<section id="horizontal">
-	  <h1>Horizontal</h1>
-	  <div class="row">
-	    <div class="item">3M</div>
-	    <div class="item">AMERICAN EXPRESS</div>
-	    <div class="item">AT&T</div>
-	    <div class="item">BOEING</div>
-	    <div class="item">CATERPILLAR</div>
-	    <div class="item">CHEVRON</div>
-	    <div class="item">CISCO SYSTEMS</div>
-	    <div class="item">COCA-COLA</div>
-	    <div class="item">DUPONT</div>
-	    <div class="item">EXXONMOBIL</div>
-	  </div>
-
-	  <div class="row">
-	    <div class="item">GENERA ELECTRIC</div>
-	    <div class="item">GOLDMAN SACHS</div>
-	    <div class="item">THE HOME DEPOT</div>
-	    <div class="item">INTEL</div>
-	    <div class="item">IBM</div>
-	    <div class="item">JOHNSON & JOHNSON</div>
-	    <div class="item">JPMORGAN CHASE</div>
-	    <div class="item">MCDONALDS</div>
-	    <div class="item">MERCK</div>
-	    <div class="item">MICROSOFT</div>
-	  </div>
-
-	  <div class="row">
-	    <div class="item">NIKE</div>
-	    <div class="item">PFIZER</div>
-	    <div class="item">PROCTER & GAMBLE</div>
-	    <div class="item">TRAVLERS</div>
-	    <div class="item">UNITED HEALTH GROUP</div>
-	    <div class="item">UNITED TECHNOLOGIES</div>
-	    <div class="item">VERIZON</div>
-	    <div class="item">VISA</div>
-	    <div class="item">WAL-MART</div>
-	    <div class="item">WALT DISNEY</div>
-	  </div>
-	</section>
-
-
-
-
-
-
-<div class = "test">
-	<div id="Maps_Image"  >
-	</div>
-</div>
-
-<button id = "myBtn"> Refresh </button>
-<p id ="demo"></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-
-<script type="text/javascript" src="javascript/jquery.js"> </script>
-<script src="javascript/animations.js"></script>
-<script src="javascript/jquery.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
-
-
-
-
-
-
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script>
     
       function initialize() {
 
@@ -211,19 +114,15 @@
 	}//end for
    }// end initialize
 
-      google.maps.event.addDomListener(window, 'load', initialize);
+     // google.maps.event.addDomListener(window, 'load', initialize);
 
-    </script>
+    
+    /*
 
 	<script>
 	document.getElementById("myBtn").addEventListener("click", displayDate);
 
 	function displayDate() {
 	    document.getElementById("demo").innerHTML = getJSON("http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol=DAL&callback=myFunction");
-	}
-	</script>
-
-
-</html>
-
-
+	}*/
+	

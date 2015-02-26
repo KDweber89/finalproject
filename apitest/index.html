@@ -14,36 +14,11 @@
   
   <p> this again is a test</p>
 
-  <p id = "result"> </p>
   <ul id="results"></ul>
 
 
   <script src="js/jquery.js"></script>
   <script src="js/api.js"></script>
-
-
-  <script> 
-  $("#myBtn").on('click', function(){
-    var symbol = $("#search-keyword").val();
-    console.log(symbol);
-    $.getJSON("http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol=" +symbol+ "&callback=?", function(response){
-      console.log(response);
-    //$(symbol).append(response);
-      $(document).ready(function(){
-        $('#myBtn').click(function(){
-          $('p').append(response)
-        })
-      })
-    })
-  })
-
-  </script>
-
-  <script>
-  </script>
-
-
-
 
 
 </body>

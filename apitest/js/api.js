@@ -1,44 +1,97 @@
+var form = $('#search');
+var input = $('#search-keyword');
+var results = $('#results');
+
+
+$("#myBtn").on('click', function(){
+    var symbol = $("#search-keyword").val();
+    console.log(symbol);
+    $.getJSON("http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol=" +symbol+ "&callback=?", function(response){
+      console.log(response);
+      $(document).ready(function(){
+        $('#myBtn').click(function(){
+          $('p').html(response)
+        })
+      })
+    })
+  })
+
 
 
 /*var form = $('#search');
 var input = $('#search-keyword');
-var results = $('#results');
-*/
-
-//create an add event listener
-/*document.getElementById("submit").addEventListener("click", function( event ){
-    document.getElementById("demo").innerHTML = "Hello World";
-  });*/
+var url = "http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol=" +symbol+ "&callback=?"
+input.val("")
 
 
-/*function displayDate() {
-    document.getElementById("demo").innerHTML = Date();
-}
-document.getElementById("submit").addEventListener("click", function( event ){
-document.getElementById("submit").addEventListener("click" , event);*/
+$("#myBtn").on('click', function(){
+    var symbol = $("#search-keyword").val();
+    console.log(symbol);
+    $.getJSON("http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol=" +symbol+ "&callback=?", function(response){
+      var html = [];
 
 
-function search( event ){
-  alert("hi");
-  event.preventDefault();
-  var symbol = $(':selected').val();
-  $.getJSON("http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol= " +  symbol  + "&callback=myFunction", function()
-    {
-    render(symbol);
-  }
-)};
-
-
-
-
-
-
-/*function render( kind, response ){
-  var things = response[symbol];
-  results.html('');
-  $.each( things, function( index, thing ){
-     results.append("<li>"+ thing.name +"</li>");
+  $.each(response, function(index, d){
+                  html.push("name : ", d.Name, ", ",
+                          "Symbol : ", d.Symbol, ", ", 
+                          "LastPrice : ", d.LastPrice, "<br>");
   });
-}*/
+
+
+      console.log(response);
+      $(document).ready(function(){
+        $('#myBtn').click(function(){
+          $('p').html(response)
+        })
+      })
+    })
+  })*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//.append.html
 
 //http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol=AAPL&callback=myFunction
+
+
+/*var form = $('#search');
+var input = $('#search-keyword');
+var apiUrl = "http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol=" +""+ "&callback=?";
+
+  $("#myBtn").on('click', function(){
+    var symbol = $("#search-keyword").val();
+    console.log(symbol);
+    $.getJSON(apiUrl + userInput, function(response){
+      console.log(response);
+      
+      $(document).ready(function(){
+        $('#myBtn').click(function(){
+          $('p').append(response)
+        })
+      })
+    })
+  })
+
+
+  $("#view_gif").append(response.data[i]["url"]);*/
+
+  //write jquery thing. It allows you to write to a particular division. 

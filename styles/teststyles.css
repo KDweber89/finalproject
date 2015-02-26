@@ -1,8 +1,163 @@
-body{
-	background-color: grey;
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #383838;
 }
 
+section{
+  margin-top: 10em;
+  padding: 20px;
+  height: 10px;
+  width: 95%;
+  display: inline-block;
+  /*background-color: #ededed;*/
+}
 
+/*  section:nth-child(2){
+}*/
+
+
+
+.col{
+  margin: 0 auto;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.row{
+  margin: 5% auto;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+}
+
+.js > .item:first-child{
+  opacity: 1;
+}
+
+.js > .item{
+  opacity: 0;
+}
+
+.item{
+  display: inline-block;
+  margin: 10px auto;
+  padding: 8px 15px;
+  border-style: solid;
+  border-color: black;
+   
+
+  
+}
+
+.col > .item {
+  color: #FFF;
+  background-color: #222;
+}
+
+.row > .item {
+  color: #222;
+  background-color: #FFF;
+}
+
+ .fadeInLeft {
+    animation-name: fadeInLeft;
+    -webkit-animation-name: fadeInLeft;
+    animation-duration: 1.6s;
+    -webkit-animation-duration: 1.6s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+ }
+
+ @keyframes fadeInLeft {
+     0% {opacity: 0;transform: translateX(-50px);}
+     40% {opacity: 0;transform: translateX(-50px);}
+     100% {opacity: 1;transform: translateX(0);
+     }
+ }
+
+ @-webkit-keyframes fadeInLeft {
+     0% {opacity: 0;transform: translateX(-50px);}
+     40% {opacity: 0;transform: translateX(-50x);}
+     100% {opacity: 1;transform: translateX(0);}
+ }
+
+.fadeInDown {
+   animation-name: fadeInDown;
+   -webkit-animation-name: fadeInDown;
+   animation-duration: 1.2s;
+   -webkit-animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+ }
+  @keyframes fadeInDown {
+     0% {opacity: 0;transform: translateY(-30px);}
+     50% {opacity: 0;transform: translateY(-30px);}
+     100% {opacity: 1;transform: translateY(0);}
+  }
+  @-webkit-keyframes fadeInDown {
+     0% {opacity: 0;-webkit-transform: translateY(-30px);}
+     50% {opacity: 0;-webkit-transform: translateY(-30px);}
+     100% {opacity: 1;-webkit-transform: translateY(0);}
+  }
+
+.fadeInUp {
+     animation-name: fadeInUp;
+     -webkit-animation-name: fadeInUp;
+     animation-duration: 2.5s;
+     -webkit-animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+ }
+ @keyframes fadeInUp {
+     0% {opacity: 0;transform: translateY(30px);}
+     60% {opacity: 0;transform: translateY(30px);}
+     100% {opacity: 1;transform: translateY(0);}
+ }
+ @-webkit-keyframes fadeInUp {
+     0% {opacity: 0;-webkit-transform: translateY(30px);}
+     60% {opacity: 0;-webkit-transform: translateY(30px);}
+     100% {opacity: 1;-webkit-transform: translateY(0);}
+ }
+.fadeInRight {
+     animation-name: fadeInRight;
+     -webkit-animation-name: fadeInRight;
+     animation-duration: 2.8s;
+     -webkit-animation-duration: 2.8s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+ }
+ @keyframes fadeInRight {
+     0% {opacity: 0;transform: translateY(30px);}
+     66% {opacity: 0;transform: translateY(30px);}
+     100% {opacity: 1;transform: translateY(0);}
+ }
+ @-webkit-keyframes fadeInRight {
+     0% {opacity: 0;-webkit-transform: translateX(30px);}
+     66% {opacity: 0;-webkit-transform: translateX(30px);}
+     100% {opacity: 1;-webkit-transform: translateX(0);}
+ }
+
+
+
+
+
+
+
+
+
+/*body{
+	background-color: grey;
+}
+*/
 
 .test{
 	background-color: black;
@@ -10,7 +165,7 @@ body{
 	width:80%;
   	position: absolute;
 	margin: auto;
-  	top: 20em; left: 0; bottom: 0; right: 0;
+  	top: 120em; left: 0; bottom: 0; right: 0;
 }
 
 
@@ -27,7 +182,20 @@ body{
 	z-index: 4;
 }
 
+.banner{
+	margin: auto;
+	background-color: black;
+	height: 5em;
+	width: 75%;
+}
 
+.banner2{
+	margin: auto;
+	background-color: lightgrey;
+	height: 5em;
+	width: 50%;
+	text-align: center;
+}
 
 
 
