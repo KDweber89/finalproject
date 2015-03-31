@@ -1,6 +1,3 @@
-
-
-    
       function initialize() {
 
  	 var threeM = new google.maps.LatLng(44.9531, -92.9953); //Maplewood MN
@@ -33,8 +30,6 @@
 	 var visa = new google.maps.LatLng(37.5514,-122.2664); // Foster City CA
 	 var walmart = new google.maps.LatLng(39.3667,-94.2133); // Bentonville AR
 	 var waltDisney = new google.maps.LatLng(34.1803,-118.3283); //Burbank, CA
-
-
 
 
 
@@ -81,48 +76,17 @@
  ];
 
 
-	//var infoWindow = new google.maps.InfoWindow(), marker, i;
 
 	//setup markers and infowindows
 	for(i=0; i<markers.length; i++){
-		//alert(markers[i][0]);
-		//bounds.extend(markers[i][0]);
 		marker = new google.maps.Marker({
 			position: markers[i][0],
 			icon: markers[i][1],
 			title: markers[i][2],
 			map: map,
-			clickable: true,
-			//flat: true,
 			body: markers[i][3]
 		});
-
-
-
-		var apitest = function (){
-			console.log("http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol=DAL&callback=myFunction")
-		} 
- 
-
-	//infowindows:
-		/*google.maps.event.addListener(marker, 'mousedown', (function(marker,i) {
-			return function(){
-				infoWindow.open(map, marker);
-			}
-		})(marker, i));
-		map.fitBounds(bounds);*/
-	}//end for
+	}
    }// end initialize
 
-     // google.maps.event.addDomListener(window, 'load', initialize);
-
-    
-    /*
-
-	<script>
-	document.getElementById("myBtn").addEventListener("click", displayDate);
-
-	function displayDate() {
-	    document.getElementById("demo").innerHTML = getJSON("http://dev.markitondemand.com/Api/v2/quote/jsonp?symbol=DAL&callback=myFunction");
-	}*/
-	
+      google.maps.event.addDomListener(window, 'load', initialize);

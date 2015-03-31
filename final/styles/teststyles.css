@@ -1,0 +1,168 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #383838;
+}
+
+
+
+.banner{
+  /*display: inline-block;*/
+  position: relative;
+  margin: auto;
+  top: 5em;
+  background-color: black;
+  height: 5em;
+  width: 75%;
+
+}
+
+.banner2{
+  text-align: center;
+  margin: auto;
+  background-color: lightgrey;
+  height: 5em;
+  width: 50%;
+}
+
+.banner2 p{
+  color: red;
+  top: -5px;
+  padding-top: 2em;
+  font-size: bold;
+
+}
+
+.information {
+  text-align: center;
+  position: relative;
+  top: 8em;
+  margin: auto;
+  height: 5em;
+  width: 55%;
+  background-color: lightgrey;
+}
+
+
+.information p{
+  color: red;
+  top: -5px;
+  padding-top: 2em;
+  font-size: bold;
+}
+
+
+
+.location {
+  margin: auto;
+  height: 5em;
+  width: 55%;
+  text-align: center;
+  background-color: lightgrey;
+}
+
+.location p{
+  color: red;
+  top: -5px;
+  padding-top: 2em;
+  font-size: bold;
+}
+
+
+
+section{
+  margin-top: 10em;
+  padding: 20px;
+  height: 10px;
+  width: 95%;
+  display: inline-block;
+  /*background-color: #ededed;*/
+}
+
+.row{
+  margin: 5% auto;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+}
+
+.js > .item:first-child{
+  opacity: 1;
+}
+
+.js > .item{
+  opacity: 0;
+}
+
+.item{
+  display: inline-block;
+  margin: 10px auto;
+  padding: 8px 15px;
+  border-style: solid;
+  border-color: black;  
+}
+
+.row > .item {
+  color: #222;
+  background-color: #FFF;
+}
+
+
+
+.fadeInUp {
+     animation-name: fadeInUp;
+     -webkit-animation-name: fadeInUp;
+     animation-duration: 2.5s;
+     -webkit-animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+ }
+ @keyframes fadeInUp {
+     0% {opacity: 0;transform: translateY(30px);}
+     60% {opacity: 0;transform: translateY(30px);}
+     100% {opacity: 1;transform: translateY(0);}
+ }
+ @-webkit-keyframes fadeInUp {
+     0% {opacity: 0;-webkit-transform: translateY(30px);}
+     60% {opacity: 0;-webkit-transform: translateY(30px);}
+     100% {opacity: 1;-webkit-transform: translateY(0);}
+ }
+
+
+
+
+.test{
+  background-color: black;
+  height: 90%;
+  width:80%;
+    position: absolute;
+  margin: auto;
+    top: 130em; left: 0; bottom: 0; right: 0;
+}
+
+
+#Maps_Image{
+  display: inline-block;
+  position: absolute;
+  background-color: grey;
+  border-style: solid;
+  border-style: 3em;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  opacity: .7;
+  z-index: 4;
+}
+
+
+
+
+
+
+
